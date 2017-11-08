@@ -1,0 +1,211 @@
+
+
+<div class="container-fluid">
+  <div class="col-sm-12">
+    <h1>Risk for Readmission w/in 30 Days after THA</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="age_widget">Age:</label>
+        <input class="js-range-slider" id="age_widget" data-min="18" data-max="90" data-from="65" data-step="1" data-grid="true" data-grid-num="9" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="1.38888888888889" data-data-type="number"/>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="gender_widget">Gender: Male-&gt;0 Female-&gt;1</label>
+        <div>
+          <select id="gender_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="gender_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="functional_widget">Functional Status: Independent-&gt;0
+                       Partially Dependent-&gt;1, Dependent-&gt;2</label>
+        <div>
+          <select id="functional_widget"><option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option></select>
+          <script type="application/json" data-for="functional_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="emergency_widget">Emergency Surgery: No-&gt;0 Yes-&gt;1</label>
+        <div>
+          <select id="emergency_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="emergency_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="asa_widget">ASA Score: 1, 2, 3, 4, 5</label>
+        <div>
+          <select id="asa_widget"><option value="1" selected>1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option></select>
+          <script type="application/json" data-for="asa_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="steroid_widget">Chronic Steroid Use: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="steroid_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="steroid_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="ascites_widget">Ascites w/in last 30d: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="ascites_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="ascites_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="sepsis_widget">Sepsis w/in last 48h: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="sepsis_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="sepsis_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="ventilator_widget">Ventilator Dependent: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="ventilator_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="ventilator_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="cancer_widget">Disseminated Cancer: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="cancer_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="cancer_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="diabetes_widget">Diabetes: No-&gt;1, Oral-&gt; 1, Insulin-&gt;2</label>
+        <div>
+          <select id="diabetes_widget"><option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option></select>
+          <script type="application/json" data-for="diabetes_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="hypertension_widget">Hypertension req meds: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="hypertension_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="hypertension_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="chf_widget">CHF History w/in last 30d: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="chf_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="chf_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="dyspnea_widget">Dyspnea: No-&gt;0, Moderate Exertion-&gt; 1, At Rest-&gt;2</label>
+        <div>
+          <select id="dyspnea_widget"><option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option></select>
+          <script type="application/json" data-for="dyspnea_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="smoker_widget">Smoker w/in last year: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="smoker_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="smoker_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="copd_widget">Severe COPD History: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="copd_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="copd_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="dialysis_widget">Dialysis: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="dialysis_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="dialysis_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="renalfail_widget">Acute Renal Failure: No-&gt;0, Yes-&gt; 1</label>
+        <div>
+          <select id="renalfail_widget"><option value="0" selected>0</option>
+<option value="1">1</option></select>
+          <script type="application/json" data-for="renalfail_widget" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="bmi_widget">BMI:</label>
+        <input class="js-range-slider" id="bmi_widget" data-min="15" data-max="60" data-from="25" data-step="1" data-grid="true" data-grid-num="9" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="2.22222222222222" data-data-type="number"/>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <h3>
+      <div id="caption" class="shiny-text-output"></div>
+    </h3>
+    <div id="value" class="shiny-html-output"></div>
+    <div id="agePlot" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+  </div>
+</div>
